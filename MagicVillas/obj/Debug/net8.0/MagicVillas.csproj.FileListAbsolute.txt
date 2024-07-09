@@ -5,6 +5,8 @@ C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\bin\Debug\net8.0\MagicVilla
 C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\bin\Debug\net8.0\MagicVillas.runtimeconfig.json
 C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\bin\Debug\net8.0\MagicVillas.dll
 C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\bin\Debug\net8.0\MagicVillas.pdb
+C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\bin\Debug\net8.0\Humanizer.dll
@@ -124,6 +126,7 @@ C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\obj\Debug\net8.0\MagicVilla
 C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\obj\Debug\net8.0\MagicVillas.csproj.CoreCompileInputs.cache
 C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\obj\Debug\net8.0\MagicVillas.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\obj\Debug\net8.0\MagicVillas.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\obj\Debug\net8.0\MagicVillas.sourcelink.json
 C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\lenovo\source\repos\MagicVillas\MagicVillas\obj\Debug\net8.0\staticwebassets\msbuild.MagicVillas.Microsoft.AspNetCore.StaticWebAssets.props

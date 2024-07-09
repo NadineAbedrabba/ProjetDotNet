@@ -1,32 +1,34 @@
 ﻿using MagicVilla_VillaAPI.Models;
 using MagicVillas.Data;
 using MagicVillas.Repository.IRepository;
-using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace MagicVillas.Repository
 {
-    public class VillaRepository : IVillaRepository
+    public class Repository<T> : IRepository<T> where T : class
     {
         private readonly ApplicationDbContext _db;
+        internal DbSet<T> dbSet;
 
-        public VillaRepository(ApplicationDbContext db)
+        public Repository(ApplicationDbContext db)
         {
             _db = db;
+            this.dbSet = _db.Set<T>();
         }
-    
 
 
 
-    public async Task CreateAsync(Villa entity)
+
+        public async Task CreateAsync(T entity)
         {
-            await _db.Villas.AddAsync(entity);
+            await dbSet.AddAsync(entity);
             await SaveAsync();
         }
 
-        public async Task<Villa>GetAsync(Expression<Func<Villa,bool>> filter = null, bool tracked = true)
+        public async Task<T> GetAsync(Expression<Func<T, bool>> filter = null, bool tracked = true)
         {
-            IQueryable<Villa> query = _db.Villas;
+            IQueryable<T> query = dbSet;
             if (!tracked)
             {
                 query = query.AsNoTracking();
@@ -38,9 +40,9 @@ namespace MagicVillas.Repository
             return await query.FirstOrDefaultAsync();
         }
 
-        public async Task<List<Villa>> GetAllAsync(Expression<Func<Villa,bool>> filter = null)
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>> filter = null)
         {
-            IQueryable<Villa> query = _db.Villas;
+            IQueryable<T> query = dbSet;
             if (filter != null)
             {
                 query = query.Where(filter);
@@ -48,14 +50,14 @@ namespace MagicVillas.Repository
             return await query.ToListAsync();
         }
 
-        public async Task RemoveAsync(Villa entity)
+        public async Task RemoveAsync(T entity)
         {
-             _db.Villas.Remove(entity);
+            dbSet.Remove(entity);
             await SaveAsync();
         }
-        public async Task UpdateAsync(Villa entity)
+        public async Task UpdateAsync(T entity)
         {
-            _db.Villas.Update(entity);
+            dbSet.Update(entity);
             await SaveAsync();
         }
 
@@ -65,7 +67,5 @@ namespace MagicVillas.Repository
         }
     }
 
-    internal class ApplcationDbContext
-    {
-    }
 }
+
